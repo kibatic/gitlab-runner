@@ -6,6 +6,7 @@ RUN apt-get -qq update &&\
     ca-certificates \
     openssh-client \
     curl \
+    git \
     dnsutils &&\
     # Docker install
     curl -sSL https://get.docker.com | sh &&\
