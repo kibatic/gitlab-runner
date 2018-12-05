@@ -11,7 +11,7 @@ if [ ! -z "$SSH_PRIVATE_KEY" ]; then
     ##
     ## Run ssh-agent (inside the build environment)
     ##
-    eval $(ssh-agent -s)
+    eval $(ssh-agent -s -a /builds/ssh_agent)
 
     ##
     ## Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
