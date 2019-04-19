@@ -6,6 +6,7 @@ RUN apt-get -qq update &&\
     DEBIAN_FRONTEND=noninteractive apt-get -qq -y --no-install-recommends install\
     build-essential \
     ca-certificates \
+    openvpn \
     openssh-client \
     curl \
     git \
