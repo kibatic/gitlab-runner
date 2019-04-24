@@ -36,4 +36,4 @@ else
     [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 fi
 
-exec /bin/bash
+exec "$@"

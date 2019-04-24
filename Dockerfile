@@ -22,4 +22,6 @@ RUN apt-get -qq update &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD rootfs /
+
+CMD "/bin/bash"
 ENTRYPOINT [ "/start.sh" ]
