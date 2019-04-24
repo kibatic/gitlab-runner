@@ -11,6 +11,7 @@ RUN apt-get -qq update &&\
     curl \
     git \
     netcat \
+    psmisc \
     dnsutils &&\
     # Docker install
     curl -sSL https://get.docker.com | sh &&\
