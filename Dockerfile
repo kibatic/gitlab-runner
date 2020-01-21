@@ -7,6 +7,8 @@ RUN apt-get -qq update &&\
     build-essential \
     ca-certificates \
     openvpn \
+    python3-pip \
+    python3-setuptools \
     openssh-client \
     curl \
     git \
@@ -18,6 +20,8 @@ RUN apt-get -qq update &&\
     # Docker compose
     curl -L https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose &&\
     chmod +x /usr/local/bin/docker-compose &&\
+    # AWS CLI
+    python3 -m pip install awscli==1.17.6 &&\
     # Cleanup
     apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
