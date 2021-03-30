@@ -12,6 +12,7 @@ RUN apt-get -qq update &&\
     openssh-client \
     curl \
     git \
+    rsync \
     netcat \
     psmisc \
     dnsutils &&\
