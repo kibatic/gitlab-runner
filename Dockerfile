@@ -1,6 +1,6 @@
 FROM debian:9
 
-ENV DOCKER_COMPOSE_VERSION 1.23.2
+ENV DOCKER_COMPOSE_VERSION 1.29.2
 
 RUN apt-get -qq update &&\
     DEBIAN_FRONTEND=noninteractive apt-get -qq -y --no-install-recommends install\
