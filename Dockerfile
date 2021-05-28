@@ -1,4 +1,4 @@
-FROM debian:9
+FROM debian:10
 
 ENV DOCKER_COMPOSE_VERSION 1.29.2
 
