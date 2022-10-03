@@ -19,7 +19,7 @@ RUN apt-get -qq update &&\
     # Docker install
     curl -sSL https://get.docker.com | sh &&\
     # Docker compose
-    curl -L https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose &&\
+    https://github.com/docker/compose/releases/download/v${DOCKER_COMPOSE_VERSION}/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose &&\
     chmod +x /usr/local/bin/docker-compose &&\
     # AWS CLI
     python3 -m pip install awscli==1.17.6 &&\
