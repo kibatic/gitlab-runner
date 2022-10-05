@@ -1,4 +1,4 @@
-FROM debian:10
+FROM debian:bullseye-slim
 
 ENV DOCKER_COMPOSE_VERSION 2.11.2
 
