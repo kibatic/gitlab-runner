@@ -17,6 +17,12 @@ RUN apt-get -qq update &&\
     rsync \
     netcat \
     psmisc \
+    bc \
+    groff \
+    jq \
+    less \
+    unzip \
+    zip \
     dnsutils &&\
     # Docker install \
     mkdir -p /etc/apt/keyrings && \
@@ -34,6 +40,13 @@ RUN apt-get -qq update &&\
     # Cleanup
     apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Download and unzip aws CLI
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+RUN unzip awscliv2.zip
+
+# Run AWS install
+RUN ./aws/install
 
 ADD rootfs /
 
