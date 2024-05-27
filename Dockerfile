@@ -21,7 +21,6 @@ RUN apt-get -qq update &&\
     jq \
     less \
     unzip \
-    zip \
     dnsutils &&\
     # Docker install \
     mkdir -p /etc/apt/keyrings && \
