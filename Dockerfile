@@ -18,7 +18,6 @@ RUN apt-get -qq update &&\
     netcat \
     psmisc \
     bc \
-    groff \
     jq \
     less \
     unzip \
