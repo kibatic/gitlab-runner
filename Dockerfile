@@ -1,6 +1,6 @@
 FROM debian:bullseye-slim
 
-ENV DOCKER_COMPOSE_VERSION 2.27.0
+ENV DOCKER_COMPOSE_VERSION 2.28.1
 
 RUN apt-get -qq update &&\
     DEBIAN_FRONTEND=noninteractive apt-get -qq -y --no-install-recommends install \
