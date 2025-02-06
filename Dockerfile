@@ -1,6 +1,6 @@
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
-ENV DOCKER_COMPOSE_VERSION 2.28.1
+ENV DOCKER_COMPOSE_VERSION 2.24.5
 
 RUN apt-get -qq update &&\
     DEBIAN_FRONTEND=noninteractive apt-get -qq -y --no-install-recommends install \
@@ -15,7 +15,7 @@ RUN apt-get -qq update &&\
     lsb-release \
     git \
     rsync \
-    netcat \
+    netcat-traditional \
     psmisc \
     bc \
     jq \
@@ -34,7 +34,7 @@ RUN apt-get -qq update &&\
     curl -SL https://github.com/docker/compose/releases/download/v${DOCKER_COMPOSE_VERSION}/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose &&\
     chmod +x /usr/local/bin/docker-compose &&\
     # AWS CLI
-    python3 -m pip install awscli==1.17.6 &&\
+    python3 -m pip install awscli==1.17.6 --break-system-packages &&\
     # Cleanup
     apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
